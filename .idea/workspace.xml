@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="be3f7154-058e-4230-85e3-6533b1c9074b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/etn_app.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Utils/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/appium_config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/HomePage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/PassengersDataPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/PaymentPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/ScheduleOptionsPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/SeatsPage.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/test_book_bus.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="2mB8655CeMDt2lLh85Vg5gIdUa0" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_click_siguiente.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_search_buses.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_departure.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_return.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_seats.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  }
+}</component>
+  <component name="RunManager" selected="Python tests.Python tests for test_book_bus.TestBookBus">
+    <configuration name="Python tests for test_book_bus.TestBookBus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="etn_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_select_return" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="etn_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_select_return&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_submit_card_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="etn_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_submit_card_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="etn_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_submit_card_holder_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_submit_passenger_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+      <module name="etn_app" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_submit_passenger_data&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_select_return" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="be3f7154-058e-4230-85e3-6533b1c9074b" name="Changes" comment="" />
+      <created>1726538431286</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1726538431286</updated>
+    </task>
+    <servers />
+  </component>
+</project>
