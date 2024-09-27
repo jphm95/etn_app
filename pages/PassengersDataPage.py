@@ -39,7 +39,6 @@ class PassengerData:
     def accept_return_insurance(self):
         self.driver.find_element(*self.return_insurance_radial).click()
 
-
     def go_next_screen(self):
         self.driver.find_element(*self.next_button).click()
 
@@ -54,7 +53,7 @@ class PassengerData:
         self.write_last_name_one(last_name_one)
         self.write_last_name_two(last_name_two)
         self.write_email(email)
-        helpers.scroll_to_text()
+
 
     def accept_insurances(self):
         self.accept_depart_insurance()

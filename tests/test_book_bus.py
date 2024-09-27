@@ -1,6 +1,7 @@
 import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
+from appium.webdriver.common.appiumby import AppiumBy
 
 from Data.data import Data
 from Utils.helpers import MobileHelpers
@@ -20,7 +21,7 @@ class TestBookBus:
         options.platform_version = '15.0'
         options.device_name = 'Pixel 8a API 35'
         options.automation_name = 'Uiautomator2'
-        options.app_package = 'mx.com.etn.etnturistarlujo'
+        options.app_package =  'mx.com.etn.etnturistarlujo'
         options.app_activity = 'com.gfa.primeraplus.MainActivity'
         options.no_reset = True
 
@@ -79,6 +80,9 @@ class TestBookBus:
         last_name_two = payment_data["last_name_two"],
         phone = payment_data["phone"]
         )
+        helper = MobileHelpers(appium_driver)
+        helper.scroll_to_text("Resumen del viaje")
+
 
     def test_submit_card_data(self, appium_driver):
         payment_data = Data.get_payment_data()
@@ -90,6 +94,8 @@ class TestBookBus:
         expiration_year = payment_data["expiration_year"],
         cvv = payment_data["cvv"]
         )
+        helper = MobileHelpers
+        helper.scroll_to_partial_text("Pagar")
 
     def test_submit_payment(self, appium_driver):
         payment_screen = PaymentPage(appium_driver)

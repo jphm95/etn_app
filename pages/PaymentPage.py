@@ -1,7 +1,8 @@
 from appium.webdriver.common.appiumby import AppiumBy
 import time
 
-
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 
 class PaymentPage:
@@ -16,18 +17,20 @@ class PaymentPage:
     last_name_two_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Segundo apellido")')
     phone_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Teléfono celular *")')
 
-    card_name_field = (AppiumBy.ID, 'holderName')
-    card_number_field = (AppiumBy.ID, 'cardNumber')
+    card_name_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("holderName")')
+    card_number_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("cardNumber")')
 
     month_list = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Mes")')
+
     #Dynamic Locator:
     expiration_month = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("{month}")')
 
     year_list = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Año")')
+
     #Dynamic Locator:
     expiration_year = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("{year}")')
 
-    cvv_field = (AppiumBy.ID, 'cvv2')
+    cvv_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("cvv2")')
 
     trip_details= (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Detalles de tu viaje")')
     close_details_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.widget.ImageView")')
@@ -53,6 +56,7 @@ class PaymentPage:
 
     def write_card_name(self, card_name):
         self.driver.find_element(*self.card_name_field).send_keys(card_name)
+
 
     def write_card_number(self, card_number):
         self.driver.find_element(*self.card_number_field).send_keys(card_number)

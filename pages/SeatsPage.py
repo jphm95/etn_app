@@ -8,8 +8,8 @@ class SeatsPage:
 
     #Locators:
 
-    seat_one = (AppiumBy.XPATH, '//android.widget.TextView[@text="4"]')
-    seat_seven = (AppiumBy.XPATH, '//android.widget.TextView[@text="4"]')
+    seat_one = (AppiumBy.XPATH, '//android.widget.TextView[@text="2"]')
+    seat_seven = (AppiumBy.XPATH, '//android.widget.TextView[@text="3"]')
 
     continue_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continuar con 1 asiento")')
 

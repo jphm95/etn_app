@@ -5,26 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="be3f7154-058e-4230-85e3-6533b1c9074b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/etn_app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Utils/helpers.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/appium_config.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/HomePage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/PassengersDataPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/PaymentPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/ScheduleOptionsPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/SeatsPage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_book_bus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/helpers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/HomePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HomePage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PassengersDataPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PassengersDataPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/PaymentPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PaymentPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/SeatsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SeatsPage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_book_bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_book_bus.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,22 +37,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_click_siguiente.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_search_buses.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_departure.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_return.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_select_seats.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data.executor&quot;: &quot;Run&quot;,
-    &quot;Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for test_book_bus.TestBookBus.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_accept_insurance.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_aeromexico.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_click_siguiente.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_fill_passenger_data.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_search_buses.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_select_departure.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_select_return.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_select_seats.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main"
   }
-}</component>
-  <component name="RunManager" selected="Python tests.Python tests for test_book_bus.TestBookBus">
+}]]></component>
+  <component name="RunManager" selected="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data">
     <configuration name="Python tests for test_book_bus.TestBookBus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="etn_app" />
       <option name="ENV_FILES" value="" />
@@ -81,7 +71,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_book_bus.TestBookBus.test_select_return" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_fill_passenger_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="etn_app" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,7 +82,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_select_return&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_fill_passenger_data&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -143,11 +133,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus" />
-        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_select_return" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_fill_passenger_data" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus" />
       </list>
     </recent_temporary>
   </component>

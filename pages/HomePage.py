@@ -6,7 +6,7 @@ class HomePage:
     def __init__(self, driver):
         self.driver = driver
 
-    #Locators
+
     origin_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Selecciona tu Origen")')
 
     destination_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Selecciona tu Destino")')
