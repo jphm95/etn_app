@@ -14,10 +14,10 @@ class Data:
     @staticmethod
     def get_passenger_data():
         return {
-            "name": "Juan",
-            "last_name_one": "Pablo",
-            "last_name_two": "JP",
-            "email": "jp@mail.com",
-            "phone": "3459876543",
+            "name": "Juanaa",
+            "last_name_one": "Pabloo",
+            "last_name_two": "HerMO",
+            "email": "johnpaul@gmail.com",
+            "phone": "4499067144",
 
         }

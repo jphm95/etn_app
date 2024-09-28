@@ -1,7 +1,7 @@
 import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
-from appium.webdriver.common.appiumby import AppiumBy
+
 
 from Data.data import Data
 from Utils.helpers import MobileHelpers
@@ -88,18 +88,21 @@ class TestBookBus:
         payment_data = Data.get_payment_data()
         payment_screen = PaymentPage(appium_driver)
         payment_screen.fill_card_data(
-        card_name = payment_data["card_name"],
-        card_number = payment_data["card_number"],
-        expiration_month = payment_data["expiration_month"],
-        expiration_year = payment_data["expiration_year"],
-        cvv = payment_data["cvv"]
+            card_name = payment_data["card_name"],
+            card_number = payment_data["card_number"],
+            expiration_month = payment_data["expiration_month"],
+            expiration_year = payment_data["expiration_year"],
+            cvv = payment_data["cvv"]
         )
-        helper = MobileHelpers
-        helper.scroll_to_partial_text("Pagar")
+        helper = MobileHelpers(appium_driver)
+        helper.scroll_down()
+
+    def test_check_trip_details(self, appium_driver):
+        payment_screen = PaymentPage(appium_driver)
+        payment_screen.check_trip_details()
 
     def test_submit_payment(self, appium_driver):
         payment_screen = PaymentPage(appium_driver)
-        payment_screen.check_trip_details()
         payment_screen.submit_payment()
         
 

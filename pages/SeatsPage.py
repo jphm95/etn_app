@@ -11,7 +11,7 @@ class SeatsPage:
     seat_one = (AppiumBy.XPATH, '//android.widget.TextView[@text="2"]')
     seat_seven = (AppiumBy.XPATH, '//android.widget.TextView[@text="3"]')
 
-    continue_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Continuar con 1 asiento")')
+    continue_button = (AppiumBy.XPATH, '//android.view.ViewGroup[contains(@content-desc, "Continuar con")]')
 
     #Methods
 

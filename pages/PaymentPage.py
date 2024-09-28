@@ -1,9 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy
-import time
-
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
-
+import time
 
 class PaymentPage:
     def __init__(self, driver):
@@ -35,7 +33,7 @@ class PaymentPage:
     trip_details= (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Detalles de tu viaje")')
     close_details_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.widget.ImageView")')
 
-    submit_payment_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().description("Pagar $930.00 MXN")')
+    submit_payment_button = (AppiumBy.XPATH, "//android.view.ViewGroup[contains(@content-desc, 'Pagar')]")
 
     #Methods
 
@@ -81,7 +79,9 @@ class PaymentPage:
         self.driver.find_element(*self.close_details_button).click()
 
     def submit_payment(self):
-        self.driver.find_element(*self.submit_payment_button).click()
+        origin_element = WebDriverWait(self.driver, 3 ).until(
+        EC.visibility_of_element_located(self.submit_payment_button))
+        origin_element.click()
 
     #Steps:
 
@@ -90,6 +90,7 @@ class PaymentPage:
         self.write_last_name_one(last_name_one)
         self.write_last_name_two(last_name_two)
         self.write_phone(phone)
+
 
     def fill_card_data(self, card_name, card_number, expiration_month, expiration_year, cvv):
         self.write_card_name(card_name)

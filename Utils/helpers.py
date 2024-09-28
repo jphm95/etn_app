@@ -1,6 +1,6 @@
 from appium.webdriver.common.appiumby import AppiumBy
-
-
+from selenium.webdriver.common.actions.action_builder import ActionBuilder
+from selenium.webdriver.common.actions.pointer_input import PointerInput
 
 
 class MobileHelpers:
@@ -23,9 +23,21 @@ class MobileHelpers:
         )
         self.driver.find_element(*scrollable)
 
+    def scroll_down(self, scroll_duration=200):
+        size = self.driver.get_window_size()
+        start_y = size['height'] * 0.8
+        end_y = size['height'] * 0.3
+        start_x = size ['width'] / 2
 
+        finger = PointerInput("touch", "finger")
+        actions = ActionBuilder(self.driver, mouse=finger)
 
+        actions.pointer_action.move_to_location(start_x, start_y)
+        actions.pointer_action.pointer_down()
+        actions.pointer_action.pause(scroll_duration / 1000)
+        actions.pointer_action.move_to_location(start_x, end_y)
+        actions.pointer_action.pointer_up()
 
-
+        actions.perform()
 
 

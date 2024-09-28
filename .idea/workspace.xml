@@ -6,9 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="be3f7154-058e-4230-85e3-6533b1c9074b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Data/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/Data/data.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Utils/helpers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Utils/helpers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/HomePage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/HomePage.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/PassengersDataPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PassengersDataPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/PaymentPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/PaymentPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pages/SeatsPage.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages/SeatsPage.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/test_book_bus.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_book_bus.py" afterDir="false" />
@@ -44,6 +43,7 @@
     "Python tests.Python tests for test_book_bus.TestBookBus.test_aeromexico.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_click_siguiente.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_fill_passenger_data.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_scroll.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_search_buses.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_select_departure.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_select_return.executor": "Run",
@@ -51,11 +51,12 @@
     "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data.executor": "Run",
     "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data.executor": "Run",
+    "Python tests.Python tests for test_book_bus.TestBookBus.test_submit_payment.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main"
   }
 }]]></component>
-  <component name="RunManager" selected="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data">
+  <component name="RunManager" selected="Python tests.Python tests for test_book_bus.TestBookBus.test_select_seats">
     <configuration name="Python tests for test_book_bus.TestBookBus" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="etn_app" />
       <option name="ENV_FILES" value="" />
@@ -71,7 +72,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_book_bus.TestBookBus.test_fill_passenger_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_select_seats" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="etn_app" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -82,7 +83,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_fill_passenger_data&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_select_seats&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -116,7 +117,7 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Python tests for test_book_bus.TestBookBus.test_submit_passenger_data" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
+    <configuration name="Python tests for test_book_bus.TestBookBus.test_submit_payment" type="tests" factoryName="Autodetect" temporary="true" nameIsGenerated="true">
       <module name="etn_app" />
       <option name="ENV_FILES" value="" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -127,16 +128,16 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_submit_passenger_data&quot;" />
+      <option name="_new_target" value="&quot;test_book_bus.TestBookBus.test_submit_payment&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_select_seats" />
+        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_payment" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_data" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_card_holder_data" />
-        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_submit_passenger_data" />
-        <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus.test_fill_passenger_data" />
         <item itemvalue="Python tests.Python tests for test_book_bus.TestBookBus" />
       </list>
     </recent_temporary>
