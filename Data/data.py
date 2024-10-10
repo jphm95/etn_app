@@ -46,6 +46,6 @@ class Data:
     @staticmethod
     def get_user_data():
         return {
-            "user": "jphm",
+            "email": "johnpaul@gmail.com",
             "password": "Abc012"
         }

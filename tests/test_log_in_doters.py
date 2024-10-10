@@ -38,7 +38,7 @@ class TestLogInDoters:
         user_data = Data.get_user_data()
         doters = DotersPage(appium_driver)
         doters.write_user(
-            email = user_data["email"]
+            email  = user_data["email"]
         )
         doters.write_user_password(
             password = user_data["password"]

@@ -53,17 +53,16 @@ class TestSingUpDoters:
             phone = personal_data["phone"]
         )
         helper = MobileHelpers(appium_driver)
-        helper.scroll_to_text("Contraseña")
+        helper.scroll_to_text("Confirma contraseña")
 
 
     def test_set_password(self, appium_driver):
-        personal_data = Data.get_passenger_data()
+        personal_data = Data.get_user_data()
         doters = DotersPage(appium_driver)
         doters.set_password(
             password = personal_data["password"],
         )
-        helper = MobileHelpers(appium_driver)
-        helper.scroll_to_text("Crear Cuenta")
+
 
 
     def test_submit_form(self, appium_driver):
