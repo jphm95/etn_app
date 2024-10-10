@@ -3,15 +3,11 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium_config import APPIUM_HOST, APPIUM_PORT
 from Data.data import Data
-from Utils.helpers import MobileHelpers
+from pages.DotersPage import DotersPage
 from pages.HomePage import HomePage
-from pages.ScheduleOptionsPage import ScheduleOptions
-from pages.SeatsPage import SeatsPage
-from pages.PassengersDataPage import PassengerData
-from pages.PaymentPage import PaymentPage
 
 
-class LogInDoters:
+class TestLogInDoters:
 
     @pytest.fixture(scope='function')
     def appium_driver(self, appium_service):
@@ -30,5 +26,25 @@ class LogInDoters:
 
         yield driver
         driver.quit()
+
+    def test_open_log_in_screen(self, appium_driver):
+        home = HomePage(appium_driver)
+        home.click_doters()
+        doters = DotersPage(appium_driver)
+        doters.click_log_in_button()
+
+
+    def test_log_in(self, appium_driver):
+        user_data = Data.get_user_data()
+        doters = DotersPage(appium_driver)
+        doters.write_user(
+            email = user_data["email"]
+        )
+        doters.write_user_password(
+            password = user_data["password"]
+        )
+
+        doters.click_log_in_user()
+
 
 

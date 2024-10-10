@@ -1,5 +1,4 @@
 from appium.webdriver.common.appiumby import AppiumBy
-from selenium.webdriver.support.expected_conditions import visibility_of_element_located
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 
@@ -33,10 +32,12 @@ class DotersPage:
     #Methods:
     #Create account
     def click_sign_in_button(self):
-        self.driver.find_element(*self.sign_up_button).click()
+        WebDriverWait(self.driver, 5).until(
+            EC.visibility_of_element_located(*self.sign_up_button)).click()
 
     def click_log_in_button(self):
-        self.driver.find_element(*self.log_in_button).click()
+        WebDriverWait(self.driver, 5).until(
+            EC.visibility_of_element_located(*self.log_in_button)).click()
 
     def write_name(self, name):
         WebDriverWait(self.driver, 10).until(
@@ -77,6 +78,9 @@ class DotersPage:
 
     def write_user_password(self, password):
         self.driver.find_element(*self.password_user).send_keys(password)
+
+    def click_log_in_user(self):
+        self.driver.find_element(*self.log_in_user_button).click()
 
     #Steps:
     def fill_personal_data(self, name, last_name_one, last_name_two, birthday):

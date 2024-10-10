@@ -5,6 +5,7 @@ from appium_config import APPIUM_HOST, APPIUM_PORT
 from Data.data import Data
 from Utils.helpers import MobileHelpers
 from pages.DotersPage import DotersPage
+from pages.HomePage import HomePage
 
 
 class TestSingUpDoters:
@@ -26,6 +27,13 @@ class TestSingUpDoters:
 
         yield driver
         driver.quit()
+
+    def test_open_sing_up_form(self, appium_driver):
+        home = HomePage(appium_driver)
+        home.click_doters()
+        doters = DotersPage(appium_driver)
+        doters.click_sign_in_button()
+
 
     def test_fill_personal_form(self, appium_driver):
         personal_data = Data.get_passenger_data()
@@ -54,6 +62,8 @@ class TestSingUpDoters:
         doters.set_password(
             password = personal_data["password"],
         )
+        helper = MobileHelpers(appium_driver)
+        helper.scroll_to_text("Crear Cuenta")
 
 
     def test_submit_form(self, appium_driver):
