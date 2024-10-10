@@ -30,6 +30,7 @@ class PaymentPage:
 
     cvv_field = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().resourceId("cvv2")')
 
+    open_ticket_details = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Viaje abierto")')
     trip_details= (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Detalles de tu viaje")')
     close_details_button = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().className("android.widget.ImageView")')
 
@@ -71,6 +72,9 @@ class PaymentPage:
 
     def write_cvv(self, cvv):
         self.driver.find_element(*self.cvv_field).send_keys(cvv)
+
+    def check_open_ticket_details(self):
+        self.driver.find_element(*self.open_ticket_details).get_text()
 
     def click_trip_details(self):
         self.driver.find_element(*self.trip_details).click()

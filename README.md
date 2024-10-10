@@ -8,7 +8,18 @@ This project focuses on automating the testing of the ETN (Enlaces Terrestres Na
 ## Features
 
 - **Automated Testing**: Simulates user interactions within the ETN mobile application, covering ticket booking and route selection.
+- **Page Object Model**: Structure tu ensure a clearness, reusability.
+- **Dynamic Locators** : As expected, some actions may being unstable. Some locators were writen in a generic way so they can behave on user expectations but keeping a clean code. 
+- *Static Methods*: They interact with other methods but keeping the code clearness.
 
+#### You can find the next Test Scenarios:
+
+- Book round trip 
+- Book single trip 
+- Book Open ticket
+- Book Senior Fare
+- Sign Up in Doters(Frecuent Traveler Program)
+- Login in Doters.
 
 ## Technologies Used
 
@@ -52,7 +63,3 @@ To set up the project locally, follow these steps:
 ## Future Work
 
 - Test Assertions.
-- Expand the test suite to cover more functionalities of the ETN app.
-- Integrate continuous integration/continuous deployment (CI/CD) for automated testing on code changes.
-- Enhance reporting features for better insights into test results.   
-- Test for IOS Version

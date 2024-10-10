@@ -8,18 +8,27 @@ class ScheduleOptions:
 
     #Locators. These may also vary on user preferences.
 
+    open_ticket = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Elegir boleto abierto")')
     departure_tariff = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Elegir").instance(2)')
     return_tariff = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Elegir").instance(1)')
 
     def select_departure_tariff(self):
-        origin_element = WebDriverWait(self.driver, 10).until(
+        departure_ticket = WebDriverWait(self.driver, 10).until(
         EC.visibility_of_element_located(self.departure_tariff))
-        origin_element.click()
+        departure_ticket.click()
 
     def select_return_tariff(self):
-        origin_element = WebDriverWait(self.driver, 10).until(
+        return_ticket = WebDriverWait(self.driver, 10).until(
         EC.visibility_of_element_located(self.return_tariff))
-        origin_element.click()
+        return_ticket.click()
+
+    def select_open_ticket(self):
+        open_ticket = WebDriverWait(self.driver, 10).until(
+        EC.visibility_of_element_located(self.open_ticket))
+        open_ticket.click()
+
+
+
 
 
 

@@ -8,24 +8,28 @@ class SeatsPage:
 
     #Locators:
 
-    seat_one = (AppiumBy.XPATH, '//android.widget.TextView[@text="2"]')
+    departure_seat = (AppiumBy.XPATH, '//android.widget.TextView("[departure_seat]")')
     seat_seven = (AppiumBy.XPATH, '//android.widget.TextView[@text="3"]')
 
     continue_button = (AppiumBy.XPATH, '//android.view.ViewGroup[contains(@content-desc, "Continuar con")]')
 
+    @staticmethod
+    def generate_seat_locator(seat):
+        return  (AppiumBy.XPATH, f'//android.widget.TextView[@text="{seat}"]')
+
     #Methods
 
-    def select_seat_one(self):
-        origin_element = WebDriverWait(self.driver, 15).until(
-        EC.visibility_of_element_located(self.seat_one))
-        origin_element.click()
-        self.driver.find_element(*self.continue_button).click()
+    def select_departure_seat(self, departure_seat):
+        seat =  self.generate_seat_locator(departure_seat)
+        WebDriverWait(self.driver, 15).until(
+        EC.visibility_of_element_located(seat)).click()
 
-    def select_seat_seven(self):
-        origin_element = WebDriverWait(self.driver, 15).until(
-        EC.visibility_of_element_located(self.seat_seven))
-        origin_element.click()
-        self.driver.find_element(*self.continue_button).click()
+
+    def select_return_seat(self, return_seat):
+        seat = self.generate_seat_locator(return_seat)
+        WebDriverWait(self.driver, 15).until(
+        EC.visibility_of_element_located(seat)).click()
+
 
 
 
