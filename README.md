@@ -10,7 +10,7 @@ This project focuses on automating the testing of the ETN (Enlaces Terrestres Na
 - **Automated Testing**: Simulates user interactions within the ETN mobile application, covering ticket booking and route selection.
 - **Page Object Model**: Structure tu ensure a clearness, reusability.
 - **Dynamic Locators** : As expected, some actions may being unstable. Some locators were writen in a generic way so they can behave on user expectations but keeping a clean code. 
-- *Static Methods*: They interact with other methods but keeping the code clearness.
+- **Static Methods**: They interact with other methods but keeping the code clearness.
 
 #### You can find the next Test Scenarios:
 
@@ -18,8 +18,11 @@ This project focuses on automating the testing of the ETN (Enlaces Terrestres Na
 - Book single trip 
 - Book Open ticket
 - Book Senior Fare
-- Sign Up in Doters(Frecuent Traveler Program)
+- Sign Up in Doters(Frequent Traveler Program)
 - Login in Doters.
+
+Here you can find Test Cases in Gherkin Language I wrote for these scenarios:
+https://drive.google.com/drive/folders/15KoSjEIv8JxSaL36uwzzDebvCkTFZrHs?usp=sharing
 
 ## Technologies Used
 
@@ -56,9 +59,11 @@ To set up the project locally, follow these steps:
 
 - Dynamic Elements: Handled dynamic UI components by implementing explicit waits to ensure elements are interactable during tests.
 
-- Emulator Performance: Optimized emulator settings for smoother test execution, reducing lag and improving reliability.
+- Data: Data management is outside the test code, and in combination with other methods, results in a free behavior.
 
 - User actions: Doing scroll and interact with some elements.
+
+- Assertions: They depend 100% on user expectations, so they were thought in a dynamic way. 
 
 ## Future Work
 
