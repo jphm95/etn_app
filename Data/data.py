@@ -8,7 +8,7 @@ class Data:
             "destination_city": "Guadalajara",
             "depart_month": "Octubre",
             "return_month": "Octubre",
-            "depart_day": "10",
+            "depart_day": "15",
             "return_day": "17"
         }
 

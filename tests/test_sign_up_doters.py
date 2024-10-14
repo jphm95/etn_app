@@ -64,7 +64,6 @@ class TestSingUpDoters:
         )
 
 
-
     def test_submit_form(self, appium_driver):
         doters = DotersPage(appium_driver)
         doters.accept_terms()

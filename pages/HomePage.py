@@ -31,6 +31,10 @@ class HomePage:
 
     return_day = (AppiumBy.ANDROID_UIAUTOMATOR, f'new UiSelector().text("[return_day]")')
 
+    selected_origin = (AppiumBy.XPATH, '//android.view.ViewGroup[contains(@content-desc, "Origen")]')
+
+
+
 
     #Functions for dynamic locators:
     @staticmethod
@@ -41,7 +45,39 @@ class HomePage:
     def generate_day_locator(day):
         return AppiumBy.ANDROID_UIAUTOMATOR, f'new UiSelector().text("{day}")'
 
-    # Methods:
+    def get_city_text(self, city_type):
+        wait = WebDriverWait(self.driver, 5)
+        if city_type == "Origen":
+            city_element = wait.until(EC.presence_of_element_located((AppiumBy.XPATH,
+            '//android.view.ViewGroup[contains(@content-desc, "Origen")]')))
+
+        elif city_type == "Destino":
+            city_element =  wait.until(EC.presence_of_element_located((AppiumBy.XPATH,
+            '//android.view.ViewGroup[contains(@content-desc, "Destino")]')))
+        else:
+            raise ValueError("city_type debe ser 'origen' o 'destino'")
+
+        city_text = city_element.get_attribute("content-desc")
+        print(f"content-desc: {repr(city_text)}")
+        return city_text
+
+    def get_date_text(self, trip_type ):
+        wait = WebDriverWait(self.driver, 5)
+        if trip_type == "Ida":
+            date_element = wait.until(EC.presence_of_element_located((AppiumBy.XPATH,
+            '//android.view.ViewGroup[contains(@content-desc, "Ida")]')))
+        elif trip_type == "Regreso":
+            date_element = wait.until(EC.presence_of_element_located((AppiumBy.XPATH,
+             '//android.view.ViewGroup[contains(@content-desc, "Regreso")]')))
+        else:
+            raise ValueError("trip_type debe ser 'Ida' o 'Regreso'")
+
+        date_text = date_element.get_attribute("content-desc")
+        print(f"content-desc: {repr(date_text)}")
+        return date_text
+
+
+        # Methods:
     def click_origin_field(self):
         self.driver.find_element(*self.origin_field).click()
 
@@ -83,7 +119,6 @@ class HomePage:
         self.driver.find_element(*self.right_arrow).click()
 
     def select_depart_month(self, depart_month):
-     #   current_month = self.driver.find_element(*self.month_locator)
         wait = WebDriverWait(self.driver, 5)
         current_month = wait.until(EC.visibility_of_element_located(self.month_locator)
                                    )
@@ -98,7 +133,6 @@ class HomePage:
             current_month = month_text.split(' ')[0]
 
     def select_return_month(self, return_month):
-        current_month = self.driver.find_element(*self.month_locator)
         wait = WebDriverWait(self.driver, 5)
         current_month = wait.until(EC.visibility_of_element_located(self.month_locator)
       )

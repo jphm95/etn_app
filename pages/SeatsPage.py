@@ -23,12 +23,19 @@ class SeatsPage:
         seat =  self.generate_seat_locator(departure_seat)
         WebDriverWait(self.driver, 15).until(
         EC.visibility_of_element_located(seat)).click()
+        self.continue_next_step()
 
 
     def select_return_seat(self, return_seat):
         seat = self.generate_seat_locator(return_seat)
         WebDriverWait(self.driver, 15).until(
         EC.visibility_of_element_located(seat)).click()
+        self.continue_next_step()
+
+    def continue_next_step(self):
+        WebDriverWait(self.driver, 3).until(
+        EC.visibility_of_element_located(self.continue_button)).click()
+
 
 
 

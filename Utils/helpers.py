@@ -1,13 +1,31 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.common.actions.action_builder import ActionBuilder
 from selenium.webdriver.common.actions.pointer_input import PointerInput
+from selenium.webdriver.support.wait import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
+
+
+class DataExtractor:
+    def __init__(self, driver):
+        self.driver = driver
+
+    @staticmethod
+    def extract_city_name(city_text):
+        if 'Origen' in city_text or 'Destino' in city_text:
+            parts = city_text.split(", ")
+            if len(parts) > 1:
+                return parts[1].strip()
+        return ""
+
+
+
 
 
 class MobileHelpers:
 
     def __init__(self, driver):
         self.driver = driver
-
 
     def scroll_to_text(self, text):
         scrollable = (

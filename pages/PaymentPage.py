@@ -1,6 +1,7 @@
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from Utils.helpers import MobileHelpers
 import time
 
 class PaymentPage:
@@ -36,6 +37,7 @@ class PaymentPage:
 
     submit_payment_button = (AppiumBy.XPATH, "//android.view.ViewGroup[contains(@content-desc, 'Pagar')]")
 
+
     #Methods
 
     def use_first_passenger_data(self):
@@ -56,19 +58,18 @@ class PaymentPage:
     def write_card_name(self, card_name):
         self.driver.find_element(*self.card_name_field).send_keys(card_name)
 
-
     def write_card_number(self, card_number):
         self.driver.find_element(*self.card_number_field).send_keys(card_number)
 
     def select_expiration_month(self, month):
         self.driver.find_element(*self.month_list).click()
         month_dynamic = (AppiumBy.ANDROID_UIAUTOMATOR, self.expiration_month[1].format(month=month))
-        self.driver.find_element(*month_dynamic).click()
+        WebDriverWait(self.driver, 3 ).until(EC.visibility_of_element_located(month_dynamic)).click()
 
     def select_expiration_year(self, year):
         self.driver.find_element(*self.year_list).click()
         year_dynamic = (AppiumBy.ANDROID_UIAUTOMATOR, self.expiration_year[1].format(year=year))
-        self.driver.find_element(*year_dynamic).click()
+        WebDriverWait(self.driver, 3 ).until(EC.visibility_of_element_located(year_dynamic)).click()
 
     def write_cvv(self, cvv):
         self.driver.find_element(*self.cvv_field).send_keys(cvv)
@@ -103,10 +104,13 @@ class PaymentPage:
         self.select_expiration_year(expiration_year)
         self.write_cvv(cvv)
 
-    def check_trip_details(self):
+    def check_trip_details(self, appium_driver):
         self.click_trip_details()
-        time.sleep(4)
+        time.sleep(3)
+        helper = MobileHelpers(appium_driver)
+        helper.scroll_down()
         self.close_trip_details()
+
 
 
 

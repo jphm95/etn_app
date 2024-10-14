@@ -3,7 +3,7 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium_config import APPIUM_HOST, APPIUM_PORT
 from Data.data import Data
-from Utils.helpers import MobileHelpers
+from Utils.helpers import MobileHelpers, DataExtractor
 from pages.HomePage import HomePage
 from pages.ScheduleOptionsPage import ScheduleOptions
 from pages.SeatsPage import SeatsPage
@@ -44,6 +44,22 @@ class TestBookSenior:
             return_month=trip_data["return_month"],
             return_day=trip_data["return_day"]
         )
+
+        origin_city_text = home_page.get_city_text("Origen")
+        destination_city_text = home_page.get_city_text("Destino")
+        origin_city = DataExtractor.extract_city_name(origin_city_text)
+        destination_city = DataExtractor.extract_city_name(destination_city_text)
+
+        assert origin_city == trip_data["origin_city"]
+        assert destination_city == trip_data["destination_city"]
+
+        depart_date_text = home_page.get_date_text("Ida")
+        return_date_text = home_page.get_date_text("Regreso")
+
+        assert trip_data["depart_day"] in depart_date_text
+        assert trip_data["depart_month"][:3] in depart_date_text
+        assert trip_data["return_day"] in return_date_text
+        assert trip_data["return_month"][:3] in return_date_text
 
         home_page.click_search_button()
 

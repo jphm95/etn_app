@@ -3,10 +3,10 @@ from appium import webdriver
 from appium.options.android import UiAutomator2Options
 from appium_config import APPIUM_HOST, APPIUM_PORT
 from Data.data import Data
-from Utils.helpers import MobileHelpers
 from pages.HomePage import HomePage
 from pages.ScheduleOptionsPage import ScheduleOptions
 from pages.SeatsPage import SeatsPage
+from Utils.helpers import MobileHelpers, DataExtractor
 from pages.PassengersDataPage import PassengerData
 from pages.PaymentPage import PaymentPage
 
@@ -39,6 +39,16 @@ class TestOpenTicket:
             depart_month = trip_data["depart_month"],
             depart_day = trip_data ["depart_day"]
         )
+        origin_city_text = home_page.get_city_text("Origen")
+        destination_city_text = home_page.get_city_text("Destino")
+        origin_city = DataExtractor.extract_city_name(origin_city_text)
+        destination_city = DataExtractor.extract_city_name(destination_city_text)
+
+        assert origin_city == trip_data["origin_city"]
+        assert destination_city == trip_data["destination_city"]
+
+        home_page.click_search_button()
+
 
     def test_select_open_ticket(self, appium_driver):
         schedule_page = ScheduleOptions(appium_driver)
