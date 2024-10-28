@@ -39,7 +39,7 @@ class MobileHelpers:
             AppiumBy.ANDROID_UIAUTOMATOR,
             f'new UiScrollable(new UiSelector().scrollable(true)).scrollIntoView(new UiSelector().textContains("{partial_text}"))'
         )
-        self.driver.find_element(*scrollable)
+        return self.driver.find_element(*scrollable)
 
     def scroll_down(self, scroll_duration=200):
         size = self.driver.get_window_size()

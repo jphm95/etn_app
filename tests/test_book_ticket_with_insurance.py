@@ -1,3 +1,5 @@
+import time
+
 import pytest
 from appium import webdriver
 from appium.options.android import UiAutomator2Options
@@ -10,7 +12,8 @@ from pages.SeatsPage import SeatsPage
 from pages.PassengersDataPage import PassengerData
 from pages.PaymentPage import PaymentPage
 
-class TestSingleTrip:
+
+class TestBookRoundTrip:
 
     @pytest.fixture(scope='function')
     def appium_driver(self, appium_service):
@@ -30,15 +33,17 @@ class TestSingleTrip:
         yield driver
         driver.quit()
 
-
-    def test_search_bus(self, appium_driver):
+    def test_search_buses(self, appium_driver):
         trip_data = Data.get_trip_data()
         home_page = HomePage(appium_driver)
-        home_page.search_single_trip(
-            origin_city = trip_data["origin_city"],
-            destination_city = trip_data["destination_city"],
-            depart_month = trip_data["depart_month"],
-            depart_day = trip_data ["depart_day"]
+
+        home_page.search_round_trip(
+            origin_city=trip_data["origin_city"],
+            destination_city=trip_data["destination_city"],
+            depart_month=trip_data["depart_month"],
+            depart_day=trip_data["depart_day"],
+            return_month=trip_data["return_month"],
+            return_day=trip_data["return_day"]
         )
 
         origin_city_text = home_page.get_city_text("Origen")
@@ -50,9 +55,12 @@ class TestSingleTrip:
         assert destination_city == trip_data["destination_city"]
 
         depart_date_text = home_page.get_date_text("Ida")
+        return_date_text = home_page.get_date_text("Regreso")
 
         assert trip_data["depart_day"] in depart_date_text
         assert trip_data["depart_month"][:3] in depart_date_text
+        assert trip_data["return_day"] in return_date_text
+        assert trip_data["return_month"][:3] in return_date_text
 
         home_page.click_search_button()
 
@@ -60,14 +68,25 @@ class TestSingleTrip:
         trip_data = Data.get_trip_data()
         schedule_page = ScheduleOptions(appium_driver)
         schedule_page.select_departure_tariff(
-            target_time=trip_data["depart_time"]
+            target_time= trip_data["depart_time"]
         )
 
-    def test_select_seat(self, appium_driver):
+    def test_select_return(self, appium_driver):
+        trip_data = Data.get_trip_data()
+        schedule_page = ScheduleOptions(appium_driver)
+        schedule_page.select_return_tariff(
+            target_time=trip_data["return_time"]
+        )
+
+    def test_select_seats(self, appium_driver):
         seat_data = Data.get_seat_number()
         seats_page = SeatsPage(appium_driver)
         seats_page.select_departure_seat(
-            departure_seat = seat_data["departure_seat"]
+            departure_seat=seat_data["departure_seat"]
+        )
+
+        seats_page.select_return_seat(
+            return_seat=seat_data["return_seat"]
         )
 
     def test_fill_passenger_data(self, appium_driver):
@@ -84,7 +103,7 @@ class TestSingleTrip:
 
     def test_accept_insurance(self, appium_driver):
         passenger_data = PassengerData(appium_driver)
-        passenger_data.accept_depart_insurance()
+        passenger_data.accept_insurances()
 
     def test_submit_passenger_data(self, appium_driver):
         passenger_data = PassengerData(appium_driver)
@@ -117,10 +136,24 @@ class TestSingleTrip:
 
     def test_check_trip_details(self, appium_driver):
         payment_screen = PaymentPage(appium_driver)
-        payment_screen.check_trip_details()
+        payment_screen.check_trip_details(appium_driver)
 
     def test_submit_payment(self, appium_driver):
         payment_screen = PaymentPage(appium_driver)
         payment_screen.submit_payment()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

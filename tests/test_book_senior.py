@@ -64,12 +64,18 @@ class TestBookSenior:
         home_page.click_search_button()
 
     def test_select_departure(self, appium_driver):
+        trip_data = Data.get_trip_data()
         schedule_page = ScheduleOptions(appium_driver)
-        schedule_page.select_departure_tariff()
+        schedule_page.select_departure_tariff(
+            target_time=trip_data["depart_time"]
+        )
 
     def test_select_return(self, appium_driver):
+        trip_data = Data.get_trip_data()
         schedule_page = ScheduleOptions(appium_driver)
-        schedule_page.select_return_tariff()
+        schedule_page.select_return_tariff(
+            target_time=trip_data["return_time"]
+        )
 
     def test_select_seats(self, appium_driver):
         seat_data = Data.get_seat_number()
@@ -93,7 +99,7 @@ class TestBookSenior:
         helper = MobileHelpers(appium_driver)
         helper.scroll_to_text("Siguiente")
 
-    def test_select_senior_tariff(self, appium_driver):
+    def test_select_senior_fare(self, appium_driver):
         passenger_data = PassengerData(appium_driver)
         passenger_data.select_insen_tariff()
 

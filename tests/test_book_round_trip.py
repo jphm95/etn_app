@@ -14,7 +14,7 @@ from pages.PaymentPage import PaymentPage
 
 
 
-class TestBookBuses:
+class TestBookRoundTrip:
 
     @pytest.fixture(scope='function')
     def appium_driver(self, appium_service):
@@ -66,14 +66,19 @@ class TestBookBuses:
 
         home_page.click_search_button()
 
-
     def test_select_departure(self, appium_driver):
+        trip_data = Data.get_trip_data()
         schedule_page = ScheduleOptions(appium_driver)
-        schedule_page.select_departure_tariff()
+        schedule_page.select_departure_tariff(
+            target_time=trip_data["depart_time"]
+        )
 
     def test_select_return(self, appium_driver):
+        trip_data = Data.get_trip_data()
         schedule_page = ScheduleOptions(appium_driver)
-        schedule_page.select_return_tariff()
+        schedule_page.select_return_tariff(
+            target_time=trip_data["return_time"]
+        )
 
     def test_select_seats(self, appium_driver):
         seat_data = Data.get_seat_number()
@@ -98,10 +103,6 @@ class TestBookBuses:
         helper = MobileHelpers(appium_driver)
         helper.scroll_to_text("Siguiente")
 
-
-    def test_accept_insurance(self, appium_driver):
-        passenger_data = PassengerData(appium_driver)
-        passenger_data.accept_insurances()
 
     def test_submit_passenger_data(self, appium_driver):
         passenger_data = PassengerData(appium_driver)

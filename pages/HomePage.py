@@ -33,7 +33,7 @@ class HomePage:
 
     selected_origin = (AppiumBy.XPATH, '//android.view.ViewGroup[contains(@content-desc, "Origen")]')
 
-
+    open_ticket = (AppiumBy.ANDROID_UIAUTOMATOR, 'new UiSelector().text("Boleto abierto")')
 
 
     #Functions for dynamic locators:
@@ -192,6 +192,12 @@ class HomePage:
         self.set_origin_city(origin_city)
         self.set_destination_city(destination_city)
         self.set_departure_date(depart_month, depart_day)
+
+    def select_open_ticket(self):
+        self.click_departure_calendar()
+        open_ticket = WebDriverWait(self.driver, 10).until(
+        EC.visibility_of_element_located(self.open_ticket))
+        open_ticket.click()
 
 
 
