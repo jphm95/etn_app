@@ -15,6 +15,7 @@ This project focuses on automating the testing of the ETN (Enlaces Terrestres Na
 #### You can find the next Test Scenarios:
 
 - Book round trip 
+- Book round trip with ticket insurance
 - Book single trip 
 - Book Open ticket
 - Book Senior Fare

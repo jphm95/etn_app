@@ -10,8 +10,8 @@ class Data:
             "return_month": "Octubre",
             "depart_day": "15",
             "return_day": "17",
-            "depart_time": "",
-            "return_time": ""
+            "depart_time": "5 PM",
+            "return_time": "5 PM"
         }
 
     @staticmethod
